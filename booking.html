@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | Demo Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Demo Hotel</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html" class="nav-cta">Book</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title reveal">
+      <span class="eyebrow">Booking</span>
+      <h1>Request a room</h1>
+      <p>This form is a front-end demo. You can connect it later to email, WhatsApp, Telegram, or a real booking system.</p>
+    </section>
+
+    <section class="section booking-layout">
+      <form class="booking-form reveal" id="bookingForm">
+        <label>Your Name
+          <input type="text" placeholder="Enter your name" required />
+        </label>
+        <label>Phone Number
+          <input type="tel" placeholder="Enter your phone" required />
+        </label>
+        <label>Room Type
+          <select required>
+            <option value="">Select room</option>
+            <option>Deluxe Room</option>
+            <option>Suite Room</option>
+            <option>Family Room</option>
+          </select>
+        </label>
+        <div class="form-row">
+          <label>Check-in
+            <input type="date" required />
+          </label>
+          <label>Check-out
+            <input type="date" required />
+          </label>
+        </div>
+        <label>Guests
+          <input type="number" min="1" placeholder="2" required />
+        </label>
+        <button type="submit">Send Request</button>
+      </form>
+
+      <aside class="contact-box reveal">
+        <h2>Contact</h2>
+        <p><strong>Location:</strong> Siem Reap, Cambodia</p>
+        <p><strong>Phone:</strong> +855 12 345 678</p>
+        <p><strong>Email:</strong> booking@demohotel.com</p>
+        <p><strong>Check-in:</strong> 2:00 PM</p>
+        <p><strong>Check-out:</strong> 12:00 PM</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Demo Hotel — Siem Reap, Cambodia</p>
+    <p>© 2026 Demo Hotel. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
