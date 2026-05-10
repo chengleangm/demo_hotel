@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Hotel | Premium Stay</title>
+  <meta name="description" content="Premium hotel demo website built with HTML, CSS and JavaScript." />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <span class="brand-mark">DH</span>
+        <span>Demo Hotel</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <nav class="nav" id="navMenu">
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#booking" class="nav-btn">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Premium Hotel Demo</p>
+          <h1>A peaceful luxury stay made simple.</h1>
+          <p class="hero-text">A modern hotel website template with rooms, booking form, gallery, reviews, amenities and contact sections — ready for GitHub Pages.</p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn primary">Check Availability</a>
+            <a href="#rooms" class="btn ghost">View Rooms</a>
+          </div>
+        </div>
+
+        <div class="booking-card reveal" id="booking">
+          <h2>Book Your Stay</h2>
+          <p>Instant demo booking request.</p>
+          <form id="bookingForm">
+            <label>
+              Check-in
+              <input type="date" id="checkin" required />
+            </label>
+            <label>
+              Check-out
+              <input type="date" id="checkout" required />
+            </label>
+            <div class="form-row">
+              <label>
+                Guests
+                <select id="guests">
+                  <option>1 Guest</option>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                  <option>5+ Guests</option>
+                </select>
+              </label>
+              <label>
+                Room
+                <select id="roomType">
+                  <option>Deluxe Room</option>
+                  <option>Garden Suite</option>
+                  <option>Family Villa</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Name
+              <input type="text" id="guestName" placeholder="Your name" required />
+            </label>
+            <label>
+              Phone / Telegram
+              <input type="text" id="guestPhone" placeholder="+855 ..." required />
+            </label>
+            <button class="btn primary full" type="submit">Request Booking</button>
+            <p class="form-message" id="formMessage"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section-small">
+      <div class="container stats-grid reveal">
+        <div><strong>48</strong><span>Elegant Rooms</span></div>
+        <div><strong>4.9</strong><span>Guest Rating</span></div>
+        <div><strong>24/7</strong><span>Reception</span></div>
+        <div><strong>10 min</strong><span>From City Center</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="rooms">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Rooms & Suites</p>
+          <h2>Choose your perfect room.</h2>
+          <p>Filter by style and select a room for your stay.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="couple">Couple</button>
+          <button class="filter-btn" data-filter="family">Family</button>
+          <button class="filter-btn" data-filter="luxury">Luxury</button>
+        </div>
+
+        <div class="room-grid">
+          <article class="room-card reveal" data-category="couple luxury">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80" alt="Deluxe Room" />
+            <div class="room-body">
+              <span class="price">$45 / night</span>
+              <h3>Deluxe Room</h3>
+              <p>King bed, balcony, workspace and warm lighting.</p>
+              <button class="select-room" data-room="Deluxe Room">Select Room</button>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-category="luxury">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=80" alt="Garden Suite" />
+            <div class="room-body">
+              <span class="price">$85 / night</span>
+              <h3>Garden Suite</h3>
+              <p>Private lounge, bathtub, garden view and premium comfort.</p>
+              <button class="select-room" data-room="Garden Suite">Select Room</button>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-category="family">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1000&q=80" alt="Family Villa" />
+            <div class="room-body">
+              <span class="price">$120 / night</span>
+              <h3>Family Villa</h3>
+              <p>Two bedrooms, extra space, sofa area and family comfort.</p>
+              <button class="select-room" data-room="Family Villa">Select Room</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="amenities">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Amenities</p>
+          <h2>Everything guests need.</h2>
+        </div>
+
+        <div class="amenity-grid">
+          <div class="amenity reveal">🏊 <h3>Pool</h3><p>Outdoor swimming pool with relaxing lounge area.</p></div>
+          <div class="amenity reveal">🍽️ <h3>Restaurant</h3><p>Breakfast, lunch and dinner with local and western dishes.</p></div>
+          <div class="amenity reveal">📶 <h3>Fast Wi-Fi</h3><p>Reliable internet for work, calls and streaming.</p></div>
+          <div class="amenity reveal">🚕 <h3>Transfer</h3><p>Airport pickup and local transport arrangement.</p></div>
+          <div class="amenity reveal">🧘 <h3>Spa</h3><p>Massage and wellness service for a calm stay.</p></div>
+          <div class="amenity reveal">🛎️ <h3>Concierge</h3><p>Tour booking, restaurant advice and guest support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2>Explore the atmosphere.</h2>
+          <p>Click any photo to preview.</p>
+        </div>
+        <div class="gallery-grid">
+          <img class="gallery-img reveal" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80" alt="Hotel exterior" />
+          <img class="gallery-img reveal" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Hotel lobby" />
+          <img class="gallery-img reveal" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=80" alt="Pool" />
+          <img class="gallery-img reveal" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="Resort" />
+          <img class="gallery-img reveal" src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=900&q=80" alt="Room interior" />
+          <img class="gallery-img reveal" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Hotel view" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Guest Reviews</p>
+          <h2>What guests say.</h2>
+        </div>
+        <div class="review-slider reveal">
+          <button class="slider-btn" id="prevReview">‹</button>
+          <div class="review-card">
+            <p id="reviewText">“Beautiful rooms, peaceful location, and very friendly staff. Perfect for a weekend stay.”</p>
+            <strong id="reviewName">Sokha Dara</strong>
+          </div>
+          <button class="slider-btn" id="nextReview">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button>What time is check-in? <span>+</span></button>
+            <p>Check-in starts from 2:00 PM. Early check-in depends on availability.</p>
+          </div>
+          <div class="faq-item">
+            <button>Do you offer airport transfer? <span>+</span></button>
+            <p>Yes, airport transfer can be arranged before arrival.</p>
+          </div>
+          <div class="faq-item">
+            <button>Is breakfast included? <span>+</span></button>
+            <p>Breakfast is included for selected room packages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Need help booking?</h2>
+          <p>Contact the hotel team directly by phone, email or Telegram.</p>
+        </div>
+        <div class="contact-card">
+          <a href="tel:+85512345678">📞 +855 12 345 678</a>
+          <a href="mailto:booking@demohotel.com">✉️ booking@demohotel.com</a>
+          <a href="https://t.me/" target="_blank">💬 Telegram</a>
+          <a href="https://maps.google.com" target="_blank">📍 View on Map</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button id="closeLightbox">×</button>
+    <img id="lightboxImg" alt="Gallery preview" />
+  </div>
+
+  <a href="#booking" class="floating-book">Book</a>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Demo Hotel</h3>
+        <p>Premium static hotel website demo.</p>
+      </div>
+      <p>© 2026 Demo Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
